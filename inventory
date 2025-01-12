@@ -7,3 +7,6 @@
 
 [file_servers]
 10.0.0.150
+
+[workstations]
+10.0.0.129 ansible_user=user ansible_become_password=12345

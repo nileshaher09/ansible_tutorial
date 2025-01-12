@@ -19,6 +19,23 @@
     when: ansible_distribution == "Ubuntu"
 
 
+- hosts: workstations
+  become: false
+  tasks:
+
+  - name: install unzip
+    homebrew:
+      name: unzip
+
+  - name: install terraform
+    unarchive:
+      src: https://releases.hashicorp.com/terraform/1.10.4/terraform_1.10.4_linux_386.zip
+      dest: /usr/local/bin
+      remote_src: yes
+      mode: 0755
+      owner: user
+      group: staff
+
 - hosts: web_servers
   become: true
   tasks:

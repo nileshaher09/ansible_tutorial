@@ -18,7 +18,7 @@
   lineinfile:
     path: /etc/httpd/conf/httpd.conf
     regexp: '^ServerAdmin'
-    line: ServerAdmin nileshaher09@gmail.com
+    line: ServerAdmin nileshaher09@yahoo.com
   when: ansible_distribution == "CentOS"
   notify: restart_apache
 
